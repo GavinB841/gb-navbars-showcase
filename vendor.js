@@ -62472,10 +62472,10 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('7.0.4')
 
 /***/ }),
 
-/***/ "./node_modules/gb-sidenav/fesm5/gavinb841-gb-sidenav.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/gb-sidenav/fesm5/gavinb841-gb-sidenav.js ***!
-  \***************************************************************/
+/***/ "./node_modules/@gavinb841/gb-sidenav/fesm5/gavinb841-gb-sidenav.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@gavinb841/gb-sidenav/fesm5/gavinb841-gb-sidenav.js ***!
+  \**************************************************************************/
 /*! exports provided: GbSidenavComponent, GbSidenavModule, ɵa */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -62605,6 +62605,142 @@ var GbSidenavModule = /** @class */ (function () {
 
 
 //# sourceMappingURL=gavinb841-gb-sidenav.js.map
+
+/***/ }),
+
+/***/ "./node_modules/gb-navbar/fesm5/gavinb841-gb-navbar.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/gb-navbar/fesm5/gavinb841-gb-navbar.js ***!
+  \*************************************************************/
+/*! exports provided: GbNavbarComponent, GbNavbarModule, ɵa */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbNavbarComponent", function() { return GbNavbarComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GbNavbarModule", function() { return GbNavbarModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return GbNavbarItemsComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-navbar.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbNavbarComponent = /** @class */ (function () {
+    function GbNavbarComponent() {
+    }
+    /**
+     * @param {?} changes
+     * @return {?}
+     */
+    GbNavbarComponent.prototype.ngOnChanges = /**
+     * @param {?} changes
+     * @return {?}
+     */
+    function (changes) {
+        if (changes.navigation) {
+            this.navigation = changes.navigation.currentValue;
+        }
+    };
+    /**
+     * @param {?} __0
+     * @return {?}
+     */
+    GbNavbarComponent.prototype.goToPage = /**
+     * @param {?} __0
+     * @return {?}
+     */
+    function (_a) {
+        var sref = _a.sref, params = _a.params;
+        // this.state.go(sref, params);
+    };
+    GbNavbarComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"], args: [{
+                    selector: 'gb-navbar',
+                    template: "\n      <aside class=\"gb-navbar\">\n          <nav class=\"list-group gb-navbar bg\">\n              <div *ngFor=\"let item of navigation\">\n                  <gb-navbar-items [item]=\"item\" (onSelect)=\"goToPage($event)\"></gb-navbar-items>\n              </div>\n          </nav>\n      </aside>\n  ",
+                    styles: [":host ::ng-deep .gb-sidenav{-webkit-box-flex:0;flex:0 0 180px;background:#132644;height:100%;max-width:14%;position:fixed;z-index:950;margin-left:-4px;margin-top:-4px}:host ::ng-deep .gb-sidenav .list-group-item.gb-sidenav-items{border-radius:0;border:0;background:0 0;color:#bbc0cf;border-bottom:thin solid #252833;margin-top:0}:host ::ng-deep .gb-sidenav .list-group.gb-sidenav.bg{width:13%}:host ::ng-deep .gb-sidenav .gb-sidenav i{padding:5px}:host ::ng-deep .gb-sidenav h5{margin-bottom:0}:host ::ng-deep .gb-sidenav h5.list-group-item.gb-sidenav-items{font-weight:700;padding:10px 0 10px 10px;color:#fff;font-size:15px;background-color:rgba(255,255,255,.1)}:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:focus,:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:hover{color:#fff;outline:0;cursor:pointer;font-weight:700}:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:focus .gb-sidenav i:active,:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:hover .gb-sidenav i:active{color:#daa520}:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items.active{color:#daa520;font-weight:700}"]
+                }] }
+    ];
+    /** @nocollapse */
+    GbNavbarComponent.ctorParameters = function () { return []; };
+    GbNavbarComponent.propDecorators = {
+        navigation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }]
+    };
+    return GbNavbarComponent;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-navbar-items/gb-navbar-items.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbNavbarItemsComponent = /** @class */ (function () {
+    function GbNavbarItemsComponent() {
+    }
+    GbNavbarItemsComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"], args: [{
+                    selector: 'gb-navbar-items',
+                    template: "\n      <div [ngSwitch]=\"item?.type\">\n      <button *ngSwitchCase=\"'link'\" type=\"button\" class=\"list-group-item gb-navbar-items\"\n              [routerLink]=\"item?.path\" routerLinkActive=\"active\">\n          <i *ngIf=\"item?.iconClass\" [ngClass]=\"item?.iconClass\"></i>\n          {{item?.label}}\n      </button>\n      <gb-navbar-items *ngFor=\"let innerItem of item?.items\" [item]=\"innerItem\"></gb-navbar-items>\n  </div>\n  ",
+                    encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewEncapsulation"].None,
+                    styles: [":host ::ng-deep .gb-sidenav{-webkit-box-flex:0;flex:0 0 180px;background:#132644;height:100%;max-width:14%;position:fixed;z-index:950;margin-left:-4px;margin-top:-4px}:host ::ng-deep .gb-sidenav .list-group-item.gb-sidenav-items{border-radius:0;border:0;background:0 0;color:#bbc0cf;border-bottom:thin solid #252833;margin-top:0}:host ::ng-deep .gb-sidenav .list-group.gb-sidenav.bg{width:13%}:host ::ng-deep .gb-sidenav .gb-sidenav i{padding:5px}:host ::ng-deep .gb-sidenav h5{margin-bottom:0}:host ::ng-deep .gb-sidenav h5.list-group-item.gb-sidenav-items{font-weight:700;padding:10px 0 10px 10px;color:#fff;font-size:15px;background-color:rgba(255,255,255,.1)}:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:focus,:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:hover{color:#fff;outline:0;cursor:pointer;font-weight:700}:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:focus .gb-sidenav i:active,:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items:hover .gb-sidenav i:active{color:#daa520}:host ::ng-deep .gb-sidenav button.list-group-item.gb-sidenav-items.active{color:#daa520;font-weight:700}"]
+                }] }
+    ];
+    /** @nocollapse */
+    GbNavbarItemsComponent.ctorParameters = function () { return []; };
+    GbNavbarItemsComponent.propDecorators = {
+        item: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }]
+    };
+    return GbNavbarItemsComponent;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/gb-navbar.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var GbNavbarModule = /** @class */ (function () {
+    function GbNavbarModule() {
+    }
+    GbNavbarModule.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"], args: [{
+                    declarations: [
+                        GbNavbarComponent,
+                        GbNavbarItemsComponent
+                    ],
+                    imports: [
+                        _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"],
+                        _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                    ],
+                    exports: [
+                        GbNavbarComponent,
+                        GbNavbarItemsComponent
+                    ]
+                },] }
+    ];
+    return GbNavbarModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: gavinb841-gb-navbar.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+
+//# sourceMappingURL=gavinb841-gb-navbar.js.map
 
 /***/ }),
 
