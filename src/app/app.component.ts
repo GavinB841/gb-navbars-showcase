@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gb-navbars-showcase';
+  public show:boolean = false;
+  public buttonName:any = 'Show Navbar';
+
+  toggle() {
+    this.show = !this.show;
+
+    // CHANGE THE NAME OF THE BUTTON.
+    if(this.show)
+      this.buttonName = "Show Sidenav";
+    else
+      this.buttonName = "Show Navbar";
+  }
+
 }
